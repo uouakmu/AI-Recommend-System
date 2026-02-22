@@ -10,7 +10,7 @@
   - 유저/상품/평점(별점) 구조 존재
 3. User, item, rate 여부
   - book_id(item)에 관한 user_id(user), rating(rate) 존재
-  - <img width="628" height="684" alt="image" src="https://github.com/user-attachments/assets/a269001b-2a88-4c14-a751-04fb7dc10047" />
+    <img width="628" height="684" alt="image" src="https://github.com/user-attachments/assets/a269001b-2a88-4c14-a751-04fb7dc10047" />
   
 ---
 ### 데이터 전처리
@@ -38,6 +38,8 @@
   - KNN 기반 협업 필터링과 내용 기반 알고리즘을 결합했는데, 그 비중은 협업 필터링에 60%, 내용 기반에 40%의 가중치를 주어 가중합으로 구성했습니다. 이를 통해 cold-start와 내용 기반의 약점을 보완하려고 했습니다.
 
 ### 평가 지표 및 결과
+<img width="1235" height="693" alt="image" src="https://github.com/user-attachments/assets/4cb153b9-6072-4b46-a3e9-f3fe8f025634" />
+
 - 사용한 평가 지표로는 크게 두 가지로, RMSE와 MAE 등의 평점 예측 방식을 우선 채택하였고, 다음으로 Precision, Recall 등의 ranking 기반 평가를 채택했습니다
 - 평점 예측 평가를 진행한 결과, CF-KNN이 가장 우수한 성능을 보인다는 것을 알 수 있었습니다. 이를 통해 KNN 기반 협업 필터링이 사용자간 패턴을 활용해 평균적인 평점 분포까지 잘 맞춘다는 것을 확인했습니다.
 - 순위 기반 평가를 진행한 결과, 전체 평가를 구성하는데 상당한 시간이 소모되어 평가 사용자 수를 1,000명으로 줄였고, 이에 따라 성능이 전체적으로 낮게 나왔습니다. 결과적으로는 Hybrid 모델이 가장 우수하게 나타났습니다. 사용자 수를 기존대로 수정한다면 더욱 정확한 추천 시스템이 완성될 것 같습니다.

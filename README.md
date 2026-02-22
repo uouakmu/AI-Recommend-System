@@ -11,9 +11,11 @@
 3. User, item, rate 여부
   - book_id(item)에 관한 user_id(user), rating(rate) 존재
   - <img width="628" height="684" alt="image" src="https://github.com/user-attachments/assets/a269001b-2a88-4c14-a751-04fb7dc10047" />
+  
 ---
 ### 데이터 전처리
 <img width="1245" height="696" alt="image" src="https://github.com/user-attachments/assets/313e916f-e0d3-4a3b-9a64-867e5a0fafc4" />
+
 - to_read.csv 같은 경우, 사용자가 읽고 싶은 책을 저장한 목록입니다. 보통
 사용자가 ‘읽고 싶다’고 나타낸 것은 별점 데이터에 비해 명확한 선호도로 볼 수 없다
 판단하여 이번 추천시스템에서 제외하였습니다.
@@ -21,11 +23,13 @@
 ### 사용한 컬럼
 <img width="1240" height="696" alt="image" src="https://github.com/user-attachments/assets/be326315-21b0-4d5f-acc3-7d9710b30c2b" />
 
+
 ### 사용 알고리즘
 - 크게 세 가지를 선정했습니다. 첫 번째는 KNN 기반 협업 필터링이고, 두 번째는 내용 기반, 마지막으로 두 알고리즘을 결합한 하이브리드 알고리즘입니다. 저는 이 세 가지 알고리즘을 통해 특정 상황에서 어떤 알고리즘이 우수한지 분석하는 것을 목표로 했습니다.
 
 - CF-KNN
 <img width="1240" height="695" alt="image" src="https://github.com/user-attachments/assets/091d659c-adce-4965-ab50-6927da99562f" />
+
   - 협업 필터링의 경우, 사용자와 책의 평점 행렬을 구성한 후 사용자 간의 cosine similarity를 계산했습니다. 이후 유사도가 높은 이웃 30명을 대상으로 예측하도록
 구성했습니다. 이웃수를 30으로 잡은 이유는 그 이하의 수치와 비교했을 때, 보다 안정적인 결과가 나와서 채택했습니다.
 - 내용 기반

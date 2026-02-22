@@ -3,14 +3,14 @@
 ---
 ### 기획안
 1. 데이터셋
-  - GoodBooks-10k Datasets
-  - https://www.kaggle.com/datasets/zygmunt/goodbooks-10k?select=ratings.csv
+    - GoodBooks-10k Datasets
+    - https://www.kaggle.com/datasets/zygmunt/goodbooks-10k?select=ratings.csv
 2. 선정 사유
-  - 가장 인기 있는 책 1만 권에 대한 평가 자료 존제
-  - 유저/상품/평점(별점) 구조 존재
+    - 가장 인기 있는 책 1만 권에 대한 평가 자료 존제
+    - 유저/상품/평점(별점) 구조 존재
 3. User, item, rate 여부
-  - book_id(item)에 관한 user_id(user), rating(rate) 존재
-    <img width="628" height="684" alt="image" src="https://github.com/user-attachments/assets/a269001b-2a88-4c14-a751-04fb7dc10047" />
+    - book_id(item)에 관한 user_id(user), rating(rate) 존재
+      <img width="628" height="684" alt="image" src="https://github.com/user-attachments/assets/a269001b-2a88-4c14-a751-04fb7dc10047" />
   
 ---
 ### 데이터 전처리
